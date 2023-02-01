@@ -1,0 +1,137 @@
+@media screen and (max-width: 600px) {
+
+
+    /* navigatie */
+    h2 {
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        align-self: flex-start;
+    }
+
+    .work {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: -40px;
+    }
+
+    .work-text {
+        width: 50%;
+        height: 38px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: yellow;
+        border-radius: 50px;
+        align-items: center;
+        color: #000;
+    }
+
+
+
+    /* work pagina */
+    .container {
+        width: 100%;
+        height: calc(100vh - 100px);
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        align-items: center;
+    }
+
+    .h1 {
+        color: #fff;
+        font-size: 40px;
+        font-family: 'Inter', sans-serif;
+        align-self: center;
+        margin-top: 150px;
+        align-self: center;
+    }
+
+    .software-developer {
+        align-self: center;
+        color: #F1FF5B;
+        font-size: 40px;
+        font-family: 'Jomolhari', serif;
+        align-self: center;
+    }
+
+    h2 {
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        align-self: center;
+    }
+
+
+
+    /* about me pagina */
+    .backround-container-about-me {
+        width: 100%;
+        height: calc(100vh - 100px);
+        background-color: #000;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .about-me-image {
+        display: none;
+    }
+
+    .about-me-text {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        align-self: center;
+    }
+
+    .about-me {
+        width: 60%;
+        font-size: 20px;
+    }
+
+
+
+    /* work pagina */
+    .container-work-pagina {
+        width: 100%;
+        height: calc(100vh - 100px);
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work-image-1 {
+        margin-top: -120px;
+        border-radius: 100px;
+        width: 500px;
+    }
+
+
+
+    /* contact pagina */
+    .container-contact {
+        width: 100%;
+        height: calc(100vh - 100px);
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+    }
+
+    .contact-text {
+        position: absolute;
+        top: 45%;
+        left: 5%;
+    }
+
+    .contact-image {
+        display: none;
+    }
+}
