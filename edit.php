@@ -8,7 +8,6 @@ $stmt->execute();
 
 $run = $stmt->get_result();
 $result = mysqli_fetch_assoc($run);
-slkdjflksjf
 $oude_prijs = $result['prijs'];
 $oude_titel = $result['naam'];
 $oude_omschrijving = $result['omschrijving'];
