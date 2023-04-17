@@ -13,7 +13,7 @@
                 <a class="nav-text" href="menu.php">menu</a>
             </div>
             <div class="nav-over-ons">
-                <a class="nav-text" href="over-ons.php">over ons</a>
+                <a class="nav-text" href="over-ons.php">contact</a>
             </div>
         </div>
         <div class="login">

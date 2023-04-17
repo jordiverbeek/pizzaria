@@ -18,8 +18,14 @@
     ?>
     </header>
     <main>
-        <div class="over-ons">
-            <a href=""></a>
+        <div class="hero">
+            <div class="over-ons">
+                <p>Adress: Groenestraat 233, 6531 HJ Nijmegen
+                </p>
+                <p>
+                    telefoon nr. 06-23676465
+                </p>
+            </div>
         </div>
     </main>
     <footer>

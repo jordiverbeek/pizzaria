@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -50,33 +49,46 @@ a {
 .nav-over-ons,
 .nav-home,
 .nav-menu {
-    width: 10%;
+    width: 8%;
     height: 40%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: grey;
     border-radius: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
+    display: inline-block;
+    position: relative;
 }
 
 .nav-text {
     color: #fff;
-    transition: all 0.2s;
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-}
-
-.nav-text:hover {
-    background-color: #fff;
-    color: #000;
     border-radius: 10px;
 }
 
-.login{
+.nav-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-text:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.login {
     height: inherit;
     width: 25%;
     display: flex;
@@ -85,17 +97,37 @@ a {
     align-items: center;
 }
 
-.login-text{
+.login-text {
     color: #fff;
     transition: all 0.2ms;
     align-self: center;
     font-size: 30px;
     margin-right: -100px;
+    display: inline-block;
+    position: relative;
+}
+
+.login-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.login-text:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 
-
 /* main */
+
 .hero {
     width: 100%;
     height: 100vh;
@@ -120,55 +152,256 @@ h2 {
     align-self: center;
 }
 
+p {
+    font-family: 'Inter', sans-serif;
+
+}
 
 
 /* menu pagina */
-.menu-container {
+
+.body-menu {
     background-image: url(/pizzeria/image/background-home-page.webp);
     background-size: auto;
+    background-size: cover;
     background-position: bottom;
     z-index: 90;
-    width: 100;
+}
+
+.menu-container {
+    width: 100%;
     height: 180vh;
-    background-color: #000;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-top: 110px;
+    align-content: flex-start;
 }
 
-.menu-top{
-    height: 200px;
+.menu-kaart-container {
     width: 100%;
+    height: inherit;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-top: 120px;
-}
-.menu-item-container{
-    height: 200px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    align-content: flex-start;
 }
 
-.menuitem{
-    height: 150px;
-    width: 700px;
-    background-color: gray;
-    border-radius: 20px;
+.menu-kaart {
+    background-color: grey;
+    width: 30%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: solid 2px #000;
+    margin-top: 10px;
+}
+
+p {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+.menu-kaart-naam {
+    width: 25%;
+    margin-left: 15px;
+    margin-right: 10px;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+.menu-kaart-omschrijving {
+    width: 65%;
+    margin-left: -10px;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu-kaart-prijs {
+    width: 10%;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+
+}
+
+.de-menu-kaart {
+    font-size: 30px;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    align-self: center;
+}
+
+input[type=text] {
+    width: 300%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    background-image: url('/pizzeria/image/searchicon.png');
+    background-size: 25px;
+    background-position: 10px 9px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    margin-top: 15px;
+    margin-left: -110px;
+}
+
+.zoekveld {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
 }
 
 /* login pagina */
 
-.form{
+.form {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     background-color: lightblue;
     justify-content: center;
     align-items: center;
 }
 
-.test{
-    
+.login-page-text {
+    height: 10%;
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.body-admin {
+    width: 100%;
+    height: 100vh;
+    background-color: grey;
+}
+
+/* adminpanel */
+
+.add-menu {
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.overig{
+    width: 100%;
+    height: 110px;
+}
+
+.toevoegen {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -40px;
+}
+
+.table-edit-delete {
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: auto;
+}
+
+td {
+    text-align: center;
+    padding: 8px;
+    width: 100%;
+    display: table-cell;
+    border-bottom: 1px solid #DDD;
+}
+
+th {
+    text-align: center;
+    padding: 8px;
+    width: 100%;
+    border-bottom: 1px solid #DDD;
+}
+
+tr:nth-child(even) {
+    width: 100%;
+}
+
+.table-naam {
+    width: 10%;
+}
+
+.table-edit {
+    width: 2%;
+}
+
+.table-delete {
+    width: 2%;
+}
+
+.table-prijs {
+    width: 5%;
+}
+
+.table-header {
+    background-color: #fff; 
+}
+
+.delete-button{
+    align-self: center;
+    text-decoration: none;
+    color: #000;
+    width: 10px;
+    height: 18%;
+}
+
+.edit-button{
+    align-self: center;
+    text-decoration: none;
+    color: #000;
+    width: 10px;
+    height: 18%;
+}
+
+
+/* over ons pagina */
+
+.over-ons {
+    height: 10%;
+    width: 30%;
+    background-color: grey;
+    border-radius: 10px;
+    position: absolute;
+    left: 200px;
+    top: 350px;
+    border: solid 3px;
+
+}
+
+/* delete pagina */
+.delete-page{
+    width: 25%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 100px;
+    top: 300px;    
+}
+
+/* edit-form */
+
+.edit-form-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }

@@ -43,7 +43,8 @@ include("header.php");
 <body>
     <div class="form">
         <form method="POST">
-            <h3>Username:</h3><input type="text" name="username">
+            <div class="login-page-text"> <p>Admin Panel</p> </div>
+            <h3>Username:</h3><input typ="text" name="username">
             <h3>Password:</h3><input type="password" name="password">
             <?php echo $error; ?>
             <br>
